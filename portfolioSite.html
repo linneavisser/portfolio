@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio site</title>
+    <link rel="icon" type="image/x-con" href="SVG/logo1.svg">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dfj5iuw.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dfj5iuw.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navArea">
+            <a href="index.html">
+                <div class="logo"></div>
+            </a>
+            <ul>
+                <li>
+                    <a href="portfolio.html">portfolio.</a>
+                </li>
+                <li>
+                    <a href="about.html">about.</a>
+                </li>
+            </ul>
+            <div class="burgerMenu" onclick="burgerMenu()"></div>
+            <div class="dropDownContent">
+                <a href="index.html">home.</a>
+                <a href="portfolio.html">portfolio.</a>
+                <a href="about.html">about.</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="projectH2">portfolio exam.</h2>
+            <div class="projectPages">
+                <section>
+                    <h5>Assignment 06 - The portfolio site</h5>
+                    <p>Create a portfolio site showcasing my 1st semester projects and what I have learnt.</p>
+                    <h5>Process</h5>
+                    <p>I started by gathering lots of inspiration from pinterest, awwward and behance which I
+                        curated in a moodboard. I created a low-fidelity wireframe and after an Xd prototype.
+                        I wanted to keep my design minimal and utilize the white space to the advantage of my design by
+                        having a high signal-to-noise ratio.
+                    </p>
+                    <h5>Design</h5>
+                    <p>I developed the design with an emphasis on contrast by using strong colour contrast between the
+                        background and text and a lot of contrast in font size and weight to establish a hierarchy
+                        on my portfolio site.</p>
+                    <p>I chose to adopt a few well-established design conventions to enhance the user experience, like
+                        having the navigation bar in the top right corner, using a burger menu in narrow viewports and
+                        having the logo redirect to the home page.</p>
+                </section>
+                <figure class="figR1"><img src="Images/moodboard-portfolio.png"
+                        alt="Moodboard for my portfolio website">
+                    <figcaption>Moodboard for my portfolio site.</figcaption>
+                </figure>
+                <section class="right">
+                    <h5>Typography</h5>
+                    <p>I wanted to create typographic contrast by using two different forms of typefaces. The typefaces
+                        I chose is Epilogue for h1, h2 and h3 elements which is a simple sans serif one with a heavy
+                        weight and Freight Neo, a humanist sans-serif typeface in a lighter weight. I thought these two
+                        created an elegant contrast when used in my website, each highlighting different elements on my
+                        portfolio page.</p>
+                    <p>A large part of the inspiration I gathered was about kinetic typography. I started
+                        experimenting with creating simple variations in After Effects but decided to code a wavy
+                        animation using CSS. By adding an animation-delay to each of the spans child
+                        elements I achieved a staggered effect to it.</p>
+                        <h5>Composition and layout</h5>
+                        <p>When designing the Xd prototype and portfolio site I focused on the rule of thirds in regards to
+                            the layout. In my Xd prototype I could calculate exactly where to place each element for it to
+                            land on each third and thus create a very appealing layout, however I found it a bit harder
+                            executing that level of precision when coding the actual site.</p>
+                        <p>In regards to my responsive design I adapted the Column Drop layout, my layout starts with
+                            multiple columns that ends up in a vertical column for smaller screens.
+                        </p>
+                </section>
+                <section class="third">
+                    <h5>Usability Testing</h5>
+                    <p>I did a 5 second test on my first landing page to understand what the users first impression of
+                        my portfolio site was in regards to the design and what it was about. I received very positive
+                        feedback regarding the design but very few understood what the site was about. I therefore
+                        redesigned my landing page by adding more information, after which I did another 5 second test
+                        with other users. This time the majority of users understood that it was a portfolio or project
+                        site.</p>
+                    <h5>JavaScript</h5>
+                    <p>I used Javascript to activate my burger menu for mobile view and for my up and down arrow on two
+                        pages. To get my script to work for both pages I added a function with a condition, depending on which
+                        page you are on different functions and eventListeners work.</p>
+                </section>
+            </div>
+            <div class="nextPrev">
+                <a href="basicContent.html">previous.</a>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>© Linnea Visser 2022</p>
+        <div id="linkedin">
+            <a href="https://www.linkedin.com/in/linnea-visser/" target="_blank">
+                <img src="SVG/linkedinIcon.svg" alt="find me on linkedIn">
+            </a>
+        </div>
+        <div id="mail">
+            <a href="mailto:linneavisser4@gmail.com">
+                <img src="SVG/mailIcon.svg" alt="e-mail me">
+            </a>
+        </div>
+    </footer>
+    <script src="JS/java.js"></script>
+</body>
+
+</html>

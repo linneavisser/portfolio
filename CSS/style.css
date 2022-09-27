@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
+
+/* GENERAL STYLING */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+background-image:  
+radial-gradient(at 89% 15%, hsla(132,100%,86%,1) 0, transparent 29%),  
+radial-gradient(at 7% 66%, hsla(136,100%,84%,1) 0, transparent 26%);
+background-size: cover;
+background-repeat: no-repeat;
+min-height: 100vh;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1em;
+}
+h1{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 4em;
+    padding-bottom: 0.5em;
+}
+h2{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 3em;
+    padding-bottom: 0.5em;
+}
+h3{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2em;
+}
+h4{
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+}
+h5{
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+p{
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+a{
+    text-decoration: none;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+    color: black;
+}
+figcaption{
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 14px;
+    padding: 1em;
+}
+
+/* HEADER */
+#navArea {
+    display: grid;
+    grid-template-columns: 10% 1fr 30%;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.logo{
+    background-image: url(../SVG/logoCutOut.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 1em;
+}
+#navArea .dropDownContent {
+    display: none;
+}
+#navArea ul {
+    justify-self: flex-end;
+    grid-column: 3;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-evenly;
+    }
+#navArea a {
+    text-decoration: none;
+    color: #000;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    transition: all 0.5s ease-in-out;
+    }
+#navArea ul li a:hover {
+    font-size: 1.8em;
+}
+#navArea .current{
+    font-size: 1.8em;
+}
+
+/* FOOTER */
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 5% 5%;
+    padding: 3em 1em 2em 1em;
+    border-top: 1.5px solid black;
+}
+footer p{
+    padding-top: 0.3em;
+    font-size: 1.2em;
+}
+#linkedin{
+    grid-column: 2;
+}
+#mail{
+    grid-column: 3;
+}
+
+/*/////// HOME PAGE //////////*/
+
+/* WELCOME SECTION */
+
+section#helloSection{
+    padding-top: 55vh;
+    padding-bottom: 30vh;
+    grid-column: 1/span 6;
+    grid-row: 1;
+    padding-left: 3em;
+}
+
+section#helloSection p{
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding-bottom: 1em;
+}
+section#helloSection a{
+    text-decoration: none;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    color: black;
+    padding-right: 2em;
+    transition: all 0.5s ease-in-out;
+}
+section#helloSection a:hover{
+    font-size: 1.4em;
+}
+/* SCROLL */
+
+.scroll{
+    grid-column: 12;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.scrollDown{
+    background-image: url(../SVG/downArrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform .3s;
+    width: 40%;
+    height: 15%;
+    cursor: pointer;
+}
+.scrollDown:hover{
+    transform: scale(1.1);
+}
+.scrollLeft{
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 6em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.scrollUp{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 8em;
+    padding-bottom: 5em;
+}
+.arrowUp{
+    background-image: url(../SVG/arrow-Up.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform .3s;
+    width: 20%;
+    height: 4%;
+
+    cursor: pointer;
+}
+.arrowUp:hover{
+    transform: scale(1.1);
+}
+  
+/* WELCOME STYLING & ANIMATION */
+
+#helloThere {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+#helloThere span {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 5em;
+    padding-bottom: 0.5em;
+    position: relative;
+    display: inline-block;
+  }
+#helloThere span:nth-child(1){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.1s;
+}
+#helloThere span:nth-child(2){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.2s;
+}
+#helloThere span:nth-child(3){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.3s;
+}
+#helloThere span:nth-child(4){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.4s;
+}
+#helloThere span:nth-child(5){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.5s;
+}
+#helloThere span:nth-child(6){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.6s;
+}
+#helloThere span:nth-child(7){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.7s;
+}
+#helloThere span:nth-child(8){
+    animation: wavy 1.2s ease-out;
+    animation-delay: 0.8s;
+}
+
+
+/*/////// ABOUT ME /////////////////*/
+
+section#aboutMe{
+    grid-column: 1/span 12;
+    display: grid;
+    grid-template-columns: 15% 9% 1fr 1fr;
+    grid-gap: 1em;
+    padding-top: 10em;
+}
+section#aboutMe h2{
+    grid-row: 1;
+    padding-bottom: 0;
+    padding-left: 1.5em;
+}
+section#aboutMe img{
+    grid-column: 4;
+    grid-row: 2;
+    width: 30vw;
+    margin: 3em 20px 1em 20px;
+}
+section#aboutMe .content{
+    margin: 2.5em 40px 1em 40px;
+    /*padding-top: 1em;*/
+    grid-column: 3;
+    grid-row: 2;
+}
+section#aboutMe .content p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding-top: 1em;
+}
+section#aboutMe h3{
+    padding-top: 0.5em;
+}
+
+/* CV */
+h2#headerCV{
+    grid-column: 3;
+    grid-row: 2;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+ section#CV{
+     grid-column: 3/span 9;
+     display: flex;
+     line-height: 1.5em;
+     padding-bottom: 20vh;
+     gap: 1.5em;
+ }
+ section#CV h4{
+     padding-bottom: 1em;
+ }
+ section#CV p{
+     padding-bottom: 1em;
+     font-size: 1.1em;
+ }
+ .education .skills{
+     padding-top: 3em;
+ }
+
+ /*////////// PORTFOLIO //////////////*/
+
+#portfolio{
+    grid-column: 1/span 12;
+    display: grid;
+    grid-template-columns: 25% 10% 1fr;
+    grid-gap: 1em;
+    padding-top: 10em;
+    padding-right: 0.5em;
+}
+section#headingPortfolio{
+    grid-row: 1;
+    padding-left: 1.5em;
+}
+
+/* project images, image hover */
+
+section#projects{
+    grid-column: 3;
+    grid-row: 2;
+}
+.projectImgs{
+    position: relative;
+    width: 100%;
+    padding-bottom: 0.5em;
+}
+.projectImgs img{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.box{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #projects .projectImgs:hover img{
+    opacity: 0.6;
+  }
+  
+  .projectImgs:hover .box {
+    opacity: 1;
+  }
+  
+  .text a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    /*font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-size: 18px;*/
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.2em;
+    padding: 16px 32px;
+  }
+
+/*// PROJECT PAGES ////*/
+
+h2.projectH2{
+    padding-top: 30vh;
+    grid-column: 1/span 5;
+    padding-left: 1em;
+    grid-row: 1;
+}
+.skillsP{
+    padding-top: 10vh;
+}
+.skillsP h3{
+    padding-bottom: 1em;
+}
+.skillsP li{
+    list-style: none;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: black;
+}
+.skillsR{
+    justify-self: center;
+    padding-top: 10vh;
+}
+.skillsR h3{
+    padding-bottom: 1em;
+}
+.skillsR li{
+    list-style: none;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: black;
+}
+.links{
+    justify-self: end;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.links a{
+    transition: all 0.5s ease-in-out;
+}
+.links a:hover{
+    font-size: 1.3em;
+}
+.links1{
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+}
+.links1 a{
+    transition: all 0.5s ease-in-out;
+}
+.links1 a:hover{
+    font-size: 1.3em;
+}
+
+/* layout project explenation */
+
+.projectPages{
+    grid-column: 2/span 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+}
+.projectPages section{
+    grid-column: 1;
+}
+.projectPages section.right{
+    grid-column: 2;
+    grid-row: 2;
+}
+.projectPages section.rightSecond{
+    grid-column: 2;
+    grid-row: 4;
+}
+.projectPages section.third{
+    grid-column: 1;
+    grid-row: 3;
+}
+.projectPages section p{
+    grid-column: 1;
+    padding-bottom: 1em;
+}
+
+#basicUX img{
+    width: 20vw;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 1em 5px 1em 5px;
+    z-index: 1;
+}
+.pic2{
+    width: 20vw;
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: -5em;
+    margin-left: 4em;
+    z-index: 2;
+}
+.figRight{
+    grid-column: 2;
+    padding-left: 3em;
+}
+.figRight img{
+    width: 100%;
+    padding-top: 4em;
+}
+.figR1{
+    grid-column: 1;
+}
+.figR1 img{
+    width: 100%;
+    padding-right: 3em;
+    padding-top: 10em;
+}
+.pic3{
+    margin-top: 8em;
+}
+#basicC{
+    width: 37vw;
+    margin-top: 30%;
+}
+.next{
+    grid-column: 11;
+    padding-bottom: 15vh;
+}
+a.next{
+    transition: all 0.5s ease-in-out;
+}
+a.next:hover{
+    font-size: 1.4em;
+}
+.nextPrev{
+    grid-column: 2/span 10;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15vh;
+}
+.nextPrev a{
+    transition: all 0.5s ease-in-out;
+}
+.nextPrev a:hover{
+    font-size: 1.4em;
+}
+/*/////// KEYFRAMES ///////////*/
+
+
+  @keyframes wavy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
+/*////// MEDIA QUERIES /////////*/
+
+@media screen and (max-width: 1180px) {
+    #navArea{
+        grid-template-columns: 10% 50%;
+    }
+    section#aboutMe{
+        grid-template-columns: 5vw 1fr 1fr 5vw;
+    }
+    section#aboutMe .content{
+        grid-column: 2;
+    }
+    section#aboutMe img{
+        grid-column: 3;
+    }
+    section#CV{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    section#CV .skills{
+        grid-column: 1/span 2;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    /* HEADER AND FOOTER */
+    #navArea{
+        grid-template-columns: 10% 1fr;
+    }
+    footer{
+        grid-gap: 1.5em;
+    }
+    h2{
+        font-size: 2.5em;
+    }
+    h3{
+        font-size: 2em;
+    }
+    /* HOME PAGE */
+    
+    section#helloSection{
+        padding-top: 50vh;
+    }
+
+    /* PORTFOLIO */
+    #portfolio{
+        grid-template-columns: 2vw 1fr 2vw;
+    }
+    #portfolio section#projects{
+        grid-column: 2;
+    }
+    .projectImgs img{
+        opacity: 0.6;
+    }
+    .box{
+        opacity: 1;
+      }
+
+    /*ABOUT ME */
+    .scrollLeft{
+        display: none;
+    }
+    .scrollUp{
+        display: none;
+    }
+    section#aboutMe{
+        grid-template-columns: 1fr 1fr;
+    }
+    section#aboutMe .content{
+        grid-column: 1;
+    }
+    section#aboutMe img{
+        grid-column: 2;
+    }
+    /* PROJECT PAGES */
+    .projectPages{
+        display: flex;
+        flex-direction: column;
+    }
+    #basicUX img{
+        width: 50vw;
+        z-index: 1;
+    }
+    .pic2{
+        width: 50vw;
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: -5em;
+        margin-left: 4em;
+        z-index: 2;
+    }
+    .figRight{
+        display: none;
+        
+    }
+    #basicC{
+        margin-top: 0%;
+        width: 70vw;
+    }
+    .figR1 img{
+        padding-top: 0;
+        padding-right: 0;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    /*HOME PAGE*/
+    .scroll{
+        display: none;
+    }
+    section#helloSection{
+        padding-top: 50vh;
+        grid-column: 1/span 8;
+    }
+    #helloThere span{
+        font-size: 4em;
+    }
+    section#helloSection p{
+        font-size: 1.5em;
+    }
+    section#helloSection a{
+        font-size: 1.2em;
+    }
+    h1{
+        font-size: 2em;
+    }
+
+    /* burger */
+    #navArea{
+        grid-template-columns: 10% 70%;
+        grid-template-rows: 30% 1fr;
+    }
+    #navArea ul{
+        display: none;
+    }
+    .burgerMenu{
+        background-image: url(../SVG/burgerMenu.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        justify-self: end;
+        grid-column: 3;
+        height: 1.8em;
+        width: 1.8em;
+        margin: 1.5em;
+        cursor: pointer;
+        position: absolute;
+    }
+    #navArea .dropdownContent a{
+        display: block;
+    }
+    .dropDownContent{
+        display: flex;
+        flex-direction: column;
+        grid-column: 3;
+        grid-row: 2;
+        text-align: right;
+        padding-right: 2em;
+        padding-top: 0.5em;
+    }
+    .dropdownContent a{
+        margin: 1em;
+    }
+    /* ABOUT ME */
+    section#aboutMe{
+        grid-template-columns: 5vw 1fr 5vw;
+    }
+    section#aboutMe img{
+        grid-column: 2;
+        justify-self: center;
+        width: 70vw;
+    }
+    section#aboutMe .content{
+        grid-column: 2;
+        grid-row: 3;
+    }
+    section#CV{
+        display: flex;
+        flex-direction: column;
+    }
+    /* PORTFOLIO */
+    section#projects{
+        grid-template-columns: none;
+    }
+    .projectImgs #bigPic{
+        width: 100%;
+    }
+    .text a{
+        font-size: 0.7em;
+    }
+
+    /* FOOTER */
+    footer{
+        grid-template-columns: 70% 1fr 1fr;
+        grid-gap: 0;
+        padding: 2em 0.5em 2em 0.5em;
+    }
+}
